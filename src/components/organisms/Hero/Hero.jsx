@@ -30,7 +30,7 @@ const Hero = ({ children }) => {
       </div>
       <div className='hero__gh-icon'>
         <a
-          href="https://github.com/FROSTYLAN"
+          href="https://github.com/devcast42"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Mi perfil de GitHub"

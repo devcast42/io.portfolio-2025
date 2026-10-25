@@ -336,7 +336,7 @@ const Footer = () => {
   const [locationModalOpen, setLocationModalOpen] = useState(false);
 
   const handleContactClick = () => {
-    window.open('https://wa.me/51977774529', '_blank', 'noopener,noreferrer');
+    window.open('https://wa.me/51907762101', '_blank', 'noopener,noreferrer');
   };
 
   const openLocationModal = () => setLocationModalOpen(true);
@@ -410,7 +410,7 @@ const Footer = () => {
                 color="#888888"
                 style={{ fontSize: '14px' }}
               >
-                Copyright ©2025 Charles Castillo
+                Copyright ©{new Date().getFullYear()} Charles Castillo
               </Typography>
             </Copyright>
 
@@ -419,7 +419,7 @@ const Footer = () => {
                 <EmailIcon />
               </SocialLink>
 
-              <SocialLink href="https://wa.me/51977774529" title="WhatsApp" target="_blank">
+              <SocialLink href="https://wa.me/51907762101" title="WhatsApp" target="_blank">
                 <WhatsAppIcon />
               </SocialLink>
 
@@ -431,7 +431,7 @@ const Footer = () => {
                 <LinkedInIcon />
               </SocialLink>
               
-              <SocialLink href="https://github.com/FROSTYLAN" title="GitHub" target="_blank" aria-label="Mi perfil de GitHub">
+              <SocialLink href="https://github.com/devcast42" title="GitHub" target="_blank" aria-label="Mi perfil de GitHub">
                 <GitHubIcon />
               </SocialLink>
             </SocialLinks>
@@ -450,7 +450,7 @@ const Footer = () => {
             </Typography>
           </FooterModalHeader>
           <FooterModalActions>
-            <FooterModalButton as="a" href="https://wa.me/51977774529" target="_blank" rel="noopener noreferrer">Ir a WhatsApp</FooterModalButton>
+            <FooterModalButton as="a" href="https://wa.me/51907762101" target="_blank" rel="noopener noreferrer">Ir a WhatsApp</FooterModalButton>
             <FooterModalButton as="a" href={cvFile} target="_blank" rel="noopener noreferrer" download>Ver CV</FooterModalButton>
           </FooterModalActions>
         </FooterModalContainer>
