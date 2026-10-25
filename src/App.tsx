@@ -10,14 +10,14 @@ function App() {
       <div id="inicio">
         <Hero>
           <p className="hero__content--greeting">Hola, Soy <span className="hero__content--highlight">Charles Castillo</span></p>
-          <h1 className="hero__content--title">Desarrollador Web</h1>
+          <h1 className="hero__content--title">Desarrollador Full Stack</h1>
           <p className="hero__content--description">
             Conoce mi trabajo y descubre cómo convierto ideas en aplicaciones web dinámicas y modernas.
           </p>
           <section className="hero__content--button-container">
             <button
               className="hero__content--button--primary"
-              onClick={() => window.open('https://wa.me/51977774529', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://wa.me/51907762101', '_blank', 'noopener,noreferrer')}
             >
               Contáctame
             </button>
@@ -33,12 +33,12 @@ function App() {
           </section>
           <section className="hero__content--stats-container">
             <div className="hero__content--stats">
-              <h3 className="hero__content--stats--number">5</h3>
-              <p className="hero__content--stats--description">years of experience</p>
+              <h3 className="hero__content--stats--number">4</h3>
+              <p className="hero__content--stats--description">años de experiencia</p>
             </div>
             <div className="hero__content--stats">
-              <h3 className="hero__content--stats--number">13</h3>
-              <p className="hero__content--stats--description">certifications of technologies</p>
+              <h3 className="hero__content--stats--number">200+</h3>
+              <p className="hero__content--stats--description">usuarios en mis sistemas</p>
             </div>
           </section>
         </Hero>

@@ -125,15 +125,15 @@ const FloatingShape = styled.div`
 const aboutData = [
   {
     title: "¿Quién soy?",
-    content: "Apasionado por el mundo digital, con experiencia en aplicaciones del lado del cliente y del servidor. Me encanta aprender nuevas tecnologías, trabajar en equipo y transformar ideas en soluciones atractivas y funcionales para el usuario."
+    content: "Desarrollador Full Stack con 4 años construyendo aplicaciones web para empresas con React, TypeScript, Node.js y NestJS. He desarrollado módulos de ERP usados por más de 200 personas, sistemas contables y plataformas en tiempo real."
   },
   {
     title: "Mi objetivo",
-    content: "Quiero seguir creciendo como profesional, asumiendo proyectos que me reten y me permitan dominar nuevas herramientas. Aspiro a crear aplicaciones web innovadoras, eficientes y escalables, que generen un impacto real en sus usuarios."
+    content: "Sumarme a un equipo que construya productos de largo plazo, donde pueda aportar tanto en frontend como en backend y llevar funcionalidades con IA a producción."
   },
   {
     title: "Mi esencia",
-    content: "Mi capacidad de aprender rápido y adaptarme a distintos entornos. Más que programar, busco entender cada proyecto, proponer ideas creativas. Mi compromiso y pasión por mejorar me permiten aportar valor en todo el proceso de desarrollo."
+    content: "Trabajo AI-first: desarrollo con Claude Code y Spec-Driven Development, primero la especificación y después el código. Me importa entender el problema del negocio y dejar código claro y fácil de mantener."
   }
 ];
 

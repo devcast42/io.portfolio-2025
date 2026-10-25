@@ -396,6 +396,14 @@
     line-height: normal;
 }
 
+/* Pantallas angostas: menos padding lateral para que "200+" quepa sin desbordar */
+@media (max-width: 400px) {
+    .hero__content--stats {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
 /* Hover: solo brillo/glow sutil en los átomos */
 .hero__atom-2 img:hover,
 .hero__atom-3 img:hover {
