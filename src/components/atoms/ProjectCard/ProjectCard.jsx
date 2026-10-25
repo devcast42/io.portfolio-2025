@@ -151,6 +151,7 @@ const DemoButton = styled(Button)`
   padding: 0;
   font-size: 16px;
   font-weight: 600;
+  line-height: normal;
   color: #B9FF66;
   background: transparent;
   border: none;
@@ -213,13 +214,11 @@ const ProjectCard = ({
   onDemoClick,
   ...props 
 }) => {
-  const handleDemoClick = () => {
-    if (onDemoClick) {
-      onDemoClick();
-    } else if (demoUrl) {
-      window.open(demoUrl, '_blank');
-    }
-  };
+  // Con demoUrl se renderiza como <a> real con los mismos estilos del botón.
+  // type: null evita que Button agregue type="button" al enlace.
+  const demoProps = onDemoClick
+    ? { onClick: onDemoClick }
+    : { forwardedAs: 'a', href: demoUrl, target: '_blank', rel: 'noopener noreferrer', type: null };
 
   return (
     <ProjectCardWrapper {...props}>
@@ -263,7 +262,7 @@ const ProjectCard = ({
             ))}
           </TechIcons>
           
-          <DemoButton onClick={handleDemoClick}>
+          <DemoButton {...demoProps}>
             Ver Demo
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
               <path d="M0.311157 11.9973C-0.103731 12.4122 -0.103731 13.0849 0.311157 13.4998C0.726045 13.9146 1.39871 13.9146 1.8136 13.4998L1.06238 12.7485L0.311157 11.9973ZM13.811 1.06228C13.811 0.475543 13.3354 -0.00010317 12.7486 -0.000102706H3.18715C2.60041 -0.000103043 2.12476 0.475544 2.12476 1.06228C2.12476 1.64902 2.60041 2.12467 3.18715 2.12467H11.6862V10.6238C11.6862 11.2105 12.1619 11.6861 12.7486 11.6861C13.3354 11.6861 13.811 11.2105 13.811 10.6238V1.06228ZM1.06238 12.7485L1.8136 13.4998L13.4998 1.8135L12.7486 1.06228L11.9974 0.311063L0.311157 11.9973L1.06238 12.7485Z" fill="#B9FF66"/>
