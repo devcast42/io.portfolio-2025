@@ -16,7 +16,7 @@ const Hero = ({ children }) => {
         <img src={atom} alt="Atom 3D" />
       </div>
       <div className='hero__charles'>
-        <img src={charles3d} alt="Charles 3D" />
+        <img src={charles3d} alt="Charles 3D" fetchPriority="high" />
       </div>
       <div className='hero__in-icon'>
         <a

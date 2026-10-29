@@ -222,7 +222,7 @@ const ProjectCard = ({
 
   return (
     <ProjectCardWrapper {...props}>
-      <ProjectImage src={image} alt={title || 'Proyecto'} />
+      <ProjectImage src={image} alt={title || 'Proyecto'} loading="lazy" decoding="async" />
       
       <ProjectContent>
         <ProjectHeader>
