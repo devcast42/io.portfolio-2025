@@ -1,5 +1,5 @@
 import { NavBar, Hero, Techs, AboutMe, Projects, Experience, Footer } from './components/organisms';
-import ctaBg from './components/organisms/Footer/container.png';
+import ctaBg from './components/organisms/Footer/container.webp';
 import './App.css'
 import cvFile from './documents/cv-charles-castillo-full-stack.pdf';
 

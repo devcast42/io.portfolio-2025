@@ -1,9 +1,9 @@
 import './style.css';
 import greenGradient from '../../../assets/green-gradient.png';
-import charles3d from '../../../assets/charles-3d.png';
-import linkedin from '../../../assets/LinkedIn.svg';
-import github from '../../../assets/GitHub.svg';
-import atom3d from '../../../assets/atom-3d.svg';
+import charles3d from '../../../assets/charles-3d.webp';
+import linkedin from '../../../assets/LinkedIn.webp';
+import github from '../../../assets/GitHub.webp';
+import atom3d from '../../../assets/atom-3d.webp';
 import atom from '../../../assets/atom.svg';
 
 const Hero = ({ children }) => {
@@ -25,7 +25,7 @@ const Hero = ({ children }) => {
           rel="noopener noreferrer"
           aria-label="LinkedIn de Charles Castillo"
         >
-          <img src={linkedin} alt="LinkedIn" />
+          <img src={linkedin} alt="LinkedIn" width={120} />
         </a>
       </div>
       <div className='hero__gh-icon'>
@@ -35,14 +35,14 @@ const Hero = ({ children }) => {
           rel="noopener noreferrer"
           aria-label="Mi perfil de GitHub"
         >
-          <img src={github} alt="GitHub" />
+          <img src={github} alt="GitHub" width={120} />
         </a>
       </div>
       <div className='hero__atom-2'>
-        <img src={atom3d} alt="Atom 3D" />
+        <img src={atom3d} alt="Atom 3D" width={450.157} />
       </div>
       <div className='hero__atom-3'>
-        <img src={atom3d} alt="Atom 3D" />
+        <img src={atom3d} alt="Atom 3D" width={450.157} />
       </div>
       <div className='hero__content'>
         {children}
