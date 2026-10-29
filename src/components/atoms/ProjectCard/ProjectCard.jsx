@@ -159,6 +159,14 @@ const DemoButton = styled(Button)`
   cursor: pointer;
   text-decoration: none;
   transition: text-decoration 160ms ease;
+  position: relative;
+
+  /* Amplía el área táctil a 44px de alto sin cambiar el layout */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: -12px -8px;
+  }
 
   svg {
     transition: none;
@@ -256,7 +264,7 @@ const ProjectCard = ({
         <ProjectFooter>
           <TechIcons>
             {technologies.map((tech, index) => (
-              <TechIcon key={index} bg={tech.color} title={tech.name}>
+              <TechIcon key={index} bg={tech.color} title={tech.name} role="img" aria-label={tech.name}>
                 {tech.icon}
               </TechIcon>
             ))}

@@ -57,6 +57,10 @@ const CarouselTrack = styled.div`
     gap: 24px;
     animation-duration: 39s;
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 const TechItemWrapper = styled.div`
@@ -151,8 +155,13 @@ const Techs = () => {
               {doubledTechnologies.map((tech, index) => {
                 const IconComponent = tech.icon;
                 return (
-                <TechItemWrapper key={`${tech.name}-${index}`}>
-                  <TechIcon 
+                <TechItemWrapper
+                  key={`${tech.name}-${index}`}
+                  // La segunda mitad duplica la lista solo para el loop visual
+                  aria-hidden={index >= technologies.length ? true : undefined}
+                >
+                  <TechIcon
+                    aria-hidden="true"
                     size="100px" 
                     mobileSize="80px"
                     iconSize="80px"

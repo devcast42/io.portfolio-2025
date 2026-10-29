@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Typography, Container, ExperienceCard, Divider } from '../../atoms';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import frontendIcon from './frontend-icon.svg';
 import fullstackIcon from './fullstack-icon.svg';
 import freelanceIcon from './freelance-icon.svg';
@@ -434,15 +434,49 @@ const Experience = () => {
   const [selectedExp, setSelectedExp] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
 
+  const modalRef = useRef(null);
+  const openerRef = useRef(null);
+
   const openExperienceModal = (exp) => {
+    openerRef.current = document.activeElement;
     setSelectedExp(exp);
     setModalOpen(true);
   };
 
-  const closeModal = () => {
+  const closeModal = useCallback(() => {
     setModalOpen(false);
     setSelectedExp(null);
-  };
+    // Devolver el foco a la tarjeta que abrió el modal
+    openerRef.current?.focus?.();
+  }, []);
+
+  // Accesibilidad del modal: foco inicial en "Cerrar", Escape para cerrar y Tab atrapado dentro
+  useEffect(() => {
+    if (!modalOpen) return undefined;
+    const modal = modalRef.current;
+    modal?.querySelector('button')?.focus();
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        return;
+      }
+      if (e.key !== 'Tab' || !modal) return;
+      const focusables = modal.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (!focusables.length) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [modalOpen, closeModal]);
 
   return (
     <ExperienceSectionWrapper>
@@ -475,6 +509,16 @@ const Experience = () => {
                   animationDelay: `${index * 0.15}s`
                 }}
                 onClick={() => openExperienceModal(experience)}
+                role="button"
+                tabIndex={0}
+                aria-haspopup="dialog"
+                aria-label={`${experience.title} en ${experience.company}, ${experience.period}. Ver detalle`}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openExperienceModal(experience);
+                  }
+                }}
               />
             ))}
           </ExperienceGrid>
@@ -521,9 +565,9 @@ const Experience = () => {
       />
       <ModalOverlay $open={modalOpen} onClick={closeModal} />
       {modalOpen && selectedExp && (
-        <ModalContainer role="dialog" aria-modal="true">
+        <ModalContainer ref={modalRef} role="dialog" aria-modal="true" aria-labelledby="experience-modal-title">
           <ModalHeader>
-            <Typography variant="h3" color="#ffffff" style={{ fontFamily: '"Tilt Neon"', fontSize: '1.5rem' }}>
+            <Typography id="experience-modal-title" variant="h3" color="#ffffff" style={{ fontFamily: '"Tilt Neon"', fontSize: '1.5rem' }}>
               {selectedExp.title} · {selectedExp.company}
             </Typography>
             <CloseButton onClick={closeModal}>Cerrar</CloseButton>
