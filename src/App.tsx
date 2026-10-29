@@ -59,7 +59,7 @@ function App() {
             </div>
             <div className="hero__content--stats">
               <h3 className="hero__content--stats--number">200+</h3>
-              <p className="hero__content--stats--description">usuarios en mis sistemas</p>
+              <p className="hero__content--stats--description">usuarios activos</p>
             </div>
           </section>
         </Hero>
