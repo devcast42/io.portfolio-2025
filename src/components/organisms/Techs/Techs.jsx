@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Container, Divider, TechIcon, HtmlIcon, CssIcon, JavaScriptIcon, TypeScriptIcon, NodeJsIcon, TailwindIcon, BootstrapIcon, SassIcon, DatabaseIcon, ReactIcon, FlutterIcon, VueIcon, SwaggerIcon, VscodeIcon, DockerIcon, GitIcon } from '../../atoms';
+import { Container, Divider, TechIcon, HtmlIcon, CssIcon, JavaScriptIcon, TypeScriptIcon, NodeJsIcon, NestJsIcon, TailwindIcon, SassIcon, PostgreSqlIcon, ReactIcon, NextJsIcon, FlutterIcon, PythonIcon, FastApiIcon, SwaggerIcon, ClaudeIcon, DockerIcon, GitIcon } from '../../atoms';
 
 const TechSectionWrapper = styled.section`
   background: #000000;
@@ -39,7 +39,8 @@ const CarouselTrack = styled.div`
   gap: 48px;
   white-space: nowrap;
   will-change: transform;
-  animation: scroll 24s linear infinite;
+  /* Duraciones escaladas a 18 tecnologías para mantener la velocidad original */
+  animation: scroll 27s linear infinite;
 
 
   @keyframes scroll {
@@ -49,12 +50,12 @@ const CarouselTrack = styled.div`
 
   @media (max-width: 768px) {
     gap: 32px;
-    animation-duration: 30s;
+    animation-duration: 34s;
   }
   
   @media (max-width: 480px) {
     gap: 24px;
-    animation-duration: 35s;
+    animation-duration: 39s;
   }
 `;
 
@@ -122,15 +123,17 @@ const technologies = [
   { icon: JavaScriptIcon, name: 'JavaScript' },
   { icon: TypeScriptIcon, name: 'TypeScript' },
   { icon: NodeJsIcon, name: 'Node.js' },
+  { icon: NestJsIcon, name: 'NestJS' },
   { icon: TailwindIcon, name: 'Tailwind' },
-  { icon: BootstrapIcon, name: 'Bootstrap' },
   { icon: SassIcon, name: 'Sass' },
-  { icon: DatabaseIcon, name: 'Database' },
+  { icon: PostgreSqlIcon, name: 'PostgreSQL' },
   { icon: ReactIcon, name: 'React' },
+  { icon: NextJsIcon, name: 'Next.js' },
   { icon: FlutterIcon, name: 'Flutter' },
-  { icon: VueIcon, name: 'Vue.js' },
+  { icon: PythonIcon, name: 'Python' },
+  { icon: FastApiIcon, name: 'FastAPI' },
   { icon: SwaggerIcon, name: 'Swagger' },
-  { icon: VscodeIcon, name: 'VS Code' },
+  { icon: ClaudeIcon, name: 'Claude Code' },
   { icon: DockerIcon, name: 'Docker' },
   { icon: GitIcon, name: 'Git' }
 ];

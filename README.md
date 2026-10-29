@@ -162,9 +162,9 @@ Las contribuciones son bienvenidas:
 
 ## 👨‍💻 Autor
 
-**Charles Castillo (FROSTYLAN)**
+**Charles Castillo (devcast42)**
 
-* 🌐 `https://github.com/FROSTYLAN`
+* 🌐 `https://github.com/devcast42`
 * 💼 `https://linkedin.com/in/charles-castillo-772968234`
 
 ---

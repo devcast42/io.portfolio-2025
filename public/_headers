@@ -1,0 +1,7 @@
+# Netlify: los archivos de /assets llevan hash en el nombre y las fuentes llevan versión,
+# así que se pueden cachear para siempre.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable

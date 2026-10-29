@@ -171,7 +171,7 @@ const experienceData = [
     "id": 2,
     "title": "Frontend Developer",
     "company": "Wost Solutions",
-    "period": "2024 – 2025",
+    "period": "2024",
     "location": "Híbrido",
     "teamSize": "11 (2 frontend, 2 mobile, 4 backend, 1 PM, 2 analistas funcionales, 1 jefe de proyecto)",
     "methodology": "Kanban",
@@ -220,19 +220,18 @@ const experienceData = [
     "id": 3,
     "title": "Full Stack Developer",
     "company": "Cadmus Tech",
-    "period": "2023 – 2024",
+    "period": "2023",
     "location": "Remoto",
     "teamSize": "5 desarrolladores",
     "methodology": "Scrum, entregas quincenales",
-    "description": "Fullstack en proyectos críticos: app de citas con verificación avanzada, sistema de apuestas, sistema de inventario y web corporativa.",
+    "description": "Full stack en proyectos en producción: APIs REST con Node.js y Express, funcionalidades en tiempo real con WebSockets, sistema de inventario y web corporativa.",
     "icon": <FrontendIcon />,
     "iconMaskSrc": frontendIcon,
     "iconBg": "linear-gradient(135deg, #00ff88, #00cc6a)",
-    "skills": ["React", "Next.js", "Node.js", "TypeScript", "Vite", "Styled-Components", "Jest", "MongoDB", "PostgreSQL", "Sockets"],
+    "skills": ["React", "Next.js", "Node.js", "Express", "TypeScript", "Vite", "Styled-Components", "Jest", "MongoDB", "PostgreSQL", "Sockets"],
     "outcomes": [
-      "Desarrollo fullstack en 4 proyectos de distinta complejidad",
+      "Desarrollo fullstack en 3 proyectos de distinta complejidad",
       "Integración de verificación de identidad y chat en tiempo real",
-      "Implementación de arquitectura escalable para sistemas de apuestas",
       "Entrega de sistema de inventario completo para empresa química"
     ],
     "projects": [
@@ -250,21 +249,6 @@ const experienceData = [
           "Implementación de endpoints y lógica de negocio en Node.js",
           "Flujos de registro, roles (admin, usuario, chicas) y autenticación",
           "Integración de chat en tiempo real con sockets"
-        ],
-        "links": {}
-      },
-      {
-        "name": "Sistema de apuestas de caballos",
-        "summary": "Manejo de saldo, registro de apuestas, gestión de eventos y control administrativo.",
-        "tech": ["React", "Node.js", "PostgreSQL"],
-        "impact": [
-          "Automatización del flujo de registro y resultados",
-          "Módulo seguro para manejo de saldo y transacciones"
-        ],
-        "responsibilities": [
-          "Desarrollo de módulos del lado del servidor",
-          "Interfaz para registro y consulta de apuestas",
-          "Integración con base de datos y control de eventos"
         ],
         "links": {}
       },
@@ -300,7 +284,7 @@ const experienceData = [
     "id": 4,
     "title": "Software Developer",
     "company": "Marea Picante",
-    "period": "2022 – 2023",
+    "period": "2022",
     "location": "Remoto",
     "teamSize": "Único desarrollador (responsable de todo: arquitectura, diseño, hardware y software)",
     "methodology": "Lean",

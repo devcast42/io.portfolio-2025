@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { Typography, Container, ProjectCard, ReactIcon, NodeJsIcon, DatabaseIcon, TailwindIcon } from '../../atoms';
-import background from './background.png';
+import background from './background.webp';
 
-import auditiaImg from './demo.auditia.png';
-import digenioImg from './demo.digenio.png';
-import smartTalentImg from './demo.smarttalent.png';
-import copalcontImg from './demo.coplacont.png';
+import auditiaImg from './demo.auditia.webp';
+import digenioImg from './demo.digenio.webp';
+import smartTalentImg from './demo.smarttalent.webp';
+import copalcontImg from './demo.coplacont.webp';
 
 const ProjectsSectionWrapper = styled.section`
   padding: 80px 0;
