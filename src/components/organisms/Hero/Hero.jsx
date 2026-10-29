@@ -10,13 +10,13 @@ const Hero = ({ children }) => {
   return (
     <div className="hero">
       <div className='hero__green-gradient'>
-        <img src={greenGradient} alt="Green Gradient" />
+        <img src={greenGradient} alt="" />
       </div>
       <div className='hero__atom'>
-        <img src={atom} alt="Atom 3D" />
+        <img src={atom} alt="" />
       </div>
       <div className='hero__charles'>
-        <img src={charles3d} alt="Charles 3D" fetchPriority="high" />
+        <img src={charles3d} alt="Avatar 3D de Charles Castillo" fetchPriority="high" />
       </div>
       <div className='hero__in-icon'>
         <a
@@ -39,10 +39,10 @@ const Hero = ({ children }) => {
         </a>
       </div>
       <div className='hero__atom-2'>
-        <img src={atom3d} alt="Atom 3D" width={450.157} />
+        <img src={atom3d} alt="" width={450.157} />
       </div>
       <div className='hero__atom-3'>
-        <img src={atom3d} alt="Atom 3D" width={450.157} />
+        <img src={atom3d} alt="" width={450.157} />
       </div>
       <div className='hero__content'>
         {children}
