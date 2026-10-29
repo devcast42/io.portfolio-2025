@@ -39,7 +39,8 @@ const CarouselTrack = styled.div`
   gap: 48px;
   white-space: nowrap;
   will-change: transform;
-  animation: scroll 24s linear infinite;
+  /* Duraciones escaladas a 18 tecnologías para mantener la velocidad original */
+  animation: scroll 27s linear infinite;
 
 
   @keyframes scroll {
@@ -49,12 +50,12 @@ const CarouselTrack = styled.div`
 
   @media (max-width: 768px) {
     gap: 32px;
-    animation-duration: 30s;
+    animation-duration: 34s;
   }
   
   @media (max-width: 480px) {
     gap: 24px;
-    animation-duration: 35s;
+    animation-duration: 39s;
   }
 `;
 

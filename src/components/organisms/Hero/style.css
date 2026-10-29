@@ -396,6 +396,15 @@
     line-height: normal;
 }
 
+/* Escritorio: menos padding lateral para que "200+" quepa en los 580px del contenedor
+   y la pastilla no se acerque al avatar */
+@media (min-width: 1025px) {
+    .hero__content--stats {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+}
+
 /* Pantallas angostas: menos padding lateral para que "200+" quepa sin desbordar */
 @media (max-width: 400px) {
     .hero__content--stats {

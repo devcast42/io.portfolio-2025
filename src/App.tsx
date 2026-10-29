@@ -10,7 +10,7 @@ function App() {
       <div id="inicio">
         <Hero>
           <p className="hero__content--greeting">Hola, Soy <span className="hero__content--highlight">Charles Castillo</span></p>
-          <h1 className="hero__content--title">Desarrollador Full Stack</h1>
+          <h1 className="hero__content--title">Desarrollador Full&nbsp;Stack</h1>
           <p className="hero__content--description">
             Conoce mi trabajo y descubre cómo convierto ideas en aplicaciones web dinámicas y modernas.
           </p>
